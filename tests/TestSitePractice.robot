@@ -20,8 +20,9 @@ Caso de Teste 02: Pesquisar produto não existente
 
 Caso de Teste 03: Listar produtos
     Passar o mouse por cima da categoria "Women" no menu principal superior de categorias
-    Clicar na sub categoria "Summer Dresses"
+    Clicar na subcategoria "Summer Dresses"
     Conferir se a categoria "Summer Dresses" foi listada no site
+    Conferir se a subcategoria "Summer Dresses" foi listada no site
 
 Caso de Teste 04: Adicionar produtos no carrinho
     Digitar o nome do produto "t-shirt" no campo de pesquisa

@@ -1,15 +1,24 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    String
+Library    Collections
 
 *** Variables ***
-${URL}        http://automationpractice.com
-${BROWSER}    chrome
-${EMAIL}      PLACEHOLDER
+${URL}                   http://automationpractice.com
+${BROWSER}               chrome
+@{LIST_SUBMENU_ITEMS}    Printed Summer Dress  Printed Summer Dress  Printed Chiffon Dress
+&{DICT_PESSOA}           customer_firstname=Teste  customer_lastname=Teste  firstname=Teste  lastname=Teste
+...                      address1=Teste  city=Teste  postcode=11111111  id_state=1  id_country=21 
+...                      phone_mobile=11111111  alias=My address  id_gender=1
 
 *** Keywords ***
 
 # Setup e Teardown
+Exemplo de log de variáveis
+    Log  ${BROWSER}
+    Log  ${LIST_FRUTAS[0]}
+    Log  ${DICT_PESSOAS.firstname}
+
 Abrir navegador
     Open Browser  ${URL}  ${BROWSER}
 
@@ -19,6 +28,12 @@ Fechar navegador
 # Passo à passo
 Conferir se a página foi exibida
     Wait Until Element Is Visible  css:#center_column > .page-heading
+
+Criar um email válido
+    [Arguments]  ${FIRSTNAME}  ${LASTNAME}
+    ${RANDOM}                  Generate Random String  8  [LOWER][UPPER][NUMBERS]
+    ${EMAIL} =                 Catenate  SEPARATOR=  ${FIRSTNAME}  ${LASTNAME}  ${RANDOM}  @teste.com.br
+    [Return]  ${EMAIL}
 
 Acessar a página home do site
     Sleep                          1s
@@ -46,12 +61,20 @@ Conferir mensagem de erro "No results were found for your search "${PRODUTO}""
 Passar o mouse por cima da categoria "${MENU_ITEM}" no menu principal superior de categorias
     Mouse Over  xpath://a[@title='${MENU_ITEM}']
 
-Clicar na sub categoria "${SUBMENU_ITEM}"
+Clicar na subcategoria "${SUBMENU_ITEM}"
     Click Element  xpath://a[@title='${SUBMENU_ITEM}']
 
 Conferir se a categoria "${MENU_ITEM}" foi listada no site
     Conferir se a página foi exibida
     Element Text Should Be              css:span.category-name  ${MENU_ITEM}
+
+Conferir se a subcategoria "${SUBMENU_ITEM}" foi listada no site
+    Page Should Contain Element        xpath=//*[@id="center_column"]/h1/span[contains(text(), "${SUBMENU_ITEM}")]
+    FOR  ${ITEM}  IN  @{LIST_SUBMENU_ITEMS}
+        ${I} =                         Get Index From List  ${LIST_SUBMENU_ITEMS}  ${ITEM}
+        ${I} =                         Evaluate  ${I} + 1
+        Page Should Contain Element    xpath=//*[@id="center_column"]/ul/li[${I}]/div/div[2]/h5/a[@title="${ITEM}"]
+    END
 
 Clicar no botão "Add to cart"
     Scroll Element Into View         css:span.available-now
@@ -83,34 +106,33 @@ Clicar no botão superior direito "Sign in"
 
 Inserir um e-mail válido
     Conferir se a página foi exibida
-    ${EMAIL}                            Generate Random String  8  [LOWER][UPPER][NUMBERS]
-    ${EMAIL} =                          Catenate  SEPARATOR=  ${EMAIL}  @teste.com.br
-    Set Suite Variable                  ${EMAIL}
+    ${EMAIL} =                          Criar um email válido  ${DICT_PESSOA.customer_firstname}  ${DICT_PESSOA.customer_lastname}
+    ${PASSWD}                           Generate Random String  5  [LOWER][UPPER][NUMBERS]
+    Set To Dictionary                   ${DICT_PESSOA}  email=${EMAIL}  passwd=${PASSWD}
     Scroll Element Into View            id:SubmitCreate
-    Input Text                          id:email_create  ${EMAIL}
+    Input Text                          id:email_create  ${DICT_PESSOA.email}
 
 Clicar no botão "Create na account"
     Click Element  id:SubmitCreate
 
 Preencher os campos obrigatórios
     Wait Until Element Is Visible  css:div.account_creation
-    ${PASSW}                       Generate Random String  5  [LOWER][UPPER][NUMBERS]
-    Select Radio Button            id_gender              1
-    Input Text                     id:customer_firstname  Teste
-    Input Text                     id:customer_lastname   Teste
-    Input Text                     id:email               ${EMAIL}
-    Input Text                     id:passwd              ${PASSW}
+    Select Radio Button            id_gender              ${DICT_PESSOA.id_gender}
+    Input Text                     id:customer_firstname  ${DICT_PESSOA.customer_firstname}
+    Input Text                     id:customer_lastname   ${DICT_PESSOA.customer_lastname}
+    Input Text                     id:email               ${DICT_PESSOA.email}
+    Input Text                     id:passwd              ${DICT_PESSOA.passwd}
     Scroll Element Into View       id:postcode
-    Input Text                     id:firstname           Teste
-    Input Text                     id:lastname            Teste
-    Input Text                     id:address1            Teste
-    Input Text                     id:city                Teste
-    Input Text                     id:postcode            11111111
-    Select From List By Value      id:id_state            1
+    Input Text                     id:firstname           ${DICT_PESSOA.firstname}
+    Input Text                     id:lastname            ${DICT_PESSOA.lastname}
+    Input Text                     id:address1            ${DICT_PESSOA.address1}
+    Input Text                     id:city                ${DICT_PESSOA.city}
+    Input Text                     id:postcode            ${DICT_PESSOA.postcode}
+    Select From List By Value      id:id_state            ${DICT_PESSOA.id_state}
     Scroll Element Into View       id:submitAccount
-    Select From List By Value      id:id_country          21
-    Input Text                     id:phone_mobile        11111111
-    Input Text                     id:alias               My address
+    Select From List By Value      id:id_country          ${DICT_PESSOA.id_country}
+    Input Text                     id:phone_mobile        ${DICT_PESSOA.phone_mobile}
+    Input Text                     id:alias               ${DICT_PESSOA.alias}
 
 
 Clicar em "Register"para finalizar o cadastro
