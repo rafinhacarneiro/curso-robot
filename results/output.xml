@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.7.0 on win32)" generated="20201022 01:13:55.635" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.7.0 on win32)" generated="20201022 02:00:46.061" rpa="false">
 <suite id="s1" name="Testapi" source="C:\python\robot\tests\testapi.robot">
 <kw name="Conectar a API" library="ResourceAPI" type="setup">
 <kw name="Create Session" library="RequestsLibrary">
@@ -8,10 +8,10 @@
 <arg>fakeAPI</arg>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20201022 01:13:55.893" level="INFO">Creating Session using : alias=fakeAPI, url=http://fakerestapi.azurewebsites.net/api/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20201022 01:13:55.892" endtime="20201022 01:13:55.893"></status>
+<msg timestamp="20201022 02:00:46.374" level="INFO">Creating Session using : alias=fakeAPI, url=http://fakerestapi.azurewebsites.net/api/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20201022 02:00:46.373" endtime="20201022 02:00:46.375"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:55.891" endtime="20201022 01:13:55.893"></status>
+<status status="PASS" starttime="20201022 02:00:46.373" endtime="20201022 02:00:46.375"></status>
 </kw>
 <test id="s1-t1" name="Buscar a listagem de todos os livros">
 <kw name="Requisitar todos os livros" library="ResourceAPI">
@@ -25,27 +25,27 @@ given `alias`</doc>
 <assign>
 <var>${RESPONSE}</var>
 </assign>
-<msg timestamp="20201022 01:13:56.352" level="INFO">GET Request : url=http://fakerestapi.azurewebsites.net/api//Books/ 
+<msg timestamp="20201022 02:00:48.239" level="INFO">GET Request : url=http://fakerestapi.azurewebsites.net/api//Books/ 
  path_url=/api//Books/ 
  headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20201022 01:13:56.352" level="INFO">GET Response : url=http://fakerestapi.azurewebsites.net/api//Books/ 
+<msg timestamp="20201022 02:00:48.239" level="INFO">GET Response : url=http://fakerestapi.azurewebsites.net/api//Books/ 
  status=200, reason=OK 
- body=[{"ID":1,"Title":"Book 1","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":100,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-21T04:13:55.2783143+00:00"},{"ID":2,"Title":"Book 2","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":200,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-20T04:13:55.2783143+00:00"},{"ID":3,"Title":"Book 3","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":300,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-19T04:13:55.2783143+00:00"},{"ID":4,"Title":"Book 4","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":400,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-18T04:13:55.2783143+00:00"},{"ID":5,"Title":"Book 5","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":500,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-17T04:13:55.2783143+00:00"},{"ID":6,"Title":"Book 6","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":600,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-16T04:13:55.2783143+00:00"},{"ID":7,"Title":"Book 7","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":700,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-15T04:13:55.2783143+00:00"},{"ID":8,"Title":"Book 8","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":800,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-14T04:13:55.2783143+00:00"},{"ID":9,"Title":"Book 9","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":900,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-13T04:13:55.2783143+00:00"},{"ID":10,"Title":"Book 10","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1000,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-12T04:13:55.2783143+00:00"},{"ID":11,"Title":"Book 11","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1100,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-11T04:13:55.2783143+00:00"},{"ID":12,"Title":"Book 12","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1200,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-10T04:13:55.2783143+00:00"},{"ID":13,"Title":"Book 13","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1300,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-09T04:13:55.2783143+00:00"},{"ID":14,"Title":"Book 14","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1400,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-08T04:13:55.2783143+00:00"},{"ID":15,"Title":"Book 15","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1500,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-07T04:13:55.2783143+00:00"},{"ID":16,"Title":"Book 16","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1600,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-06T04:13:55.2783143+00:00"},{"ID":17,"Title":"Book 17","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1700,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-05T04:13:55.2783143+00:00"},{"ID":18,"Title":"Book 18","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1800,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-04T04:13:55.2783143+00:00"},{"ID":19,"Title":"Book 19","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1900,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-03T04:13:55.2783143+00:00"},{"ID":20,"Title":"Book 20","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":2000,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-02T04:13:55.2783143+00:00"},{"ID":21,"Title":"Book 21","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":2100,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lo... (set the log level to DEBUG or TRACE to see the full content) 
+ body=[{"ID":1,"Title":"Book 1","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":100,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-21T05:00:45.7540147+00:00"},{"ID":2,"Title":"Book 2","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":200,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-20T05:00:45.7540147+00:00"},{"ID":3,"Title":"Book 3","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":300,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-19T05:00:45.7540147+00:00"},{"ID":4,"Title":"Book 4","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":400,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-18T05:00:45.7540147+00:00"},{"ID":5,"Title":"Book 5","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":500,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-17T05:00:45.7540147+00:00"},{"ID":6,"Title":"Book 6","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":600,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-16T05:00:45.7540147+00:00"},{"ID":7,"Title":"Book 7","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":700,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-15T05:00:45.7540147+00:00"},{"ID":8,"Title":"Book 8","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":800,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-14T05:00:45.7540147+00:00"},{"ID":9,"Title":"Book 9","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":900,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-13T05:00:45.7540147+00:00"},{"ID":10,"Title":"Book 10","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1000,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-12T05:00:45.7540147+00:00"},{"ID":11,"Title":"Book 11","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1100,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-11T05:00:45.7540147+00:00"},{"ID":12,"Title":"Book 12","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1200,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-10T05:00:45.7540147+00:00"},{"ID":13,"Title":"Book 13","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1300,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-09T05:00:45.7540147+00:00"},{"ID":14,"Title":"Book 14","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1400,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-08T05:00:45.7540147+00:00"},{"ID":15,"Title":"Book 15","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1500,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-07T05:00:45.7540147+00:00"},{"ID":16,"Title":"Book 16","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1600,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-06T05:00:45.7540147+00:00"},{"ID":17,"Title":"Book 17","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1700,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-05T05:00:45.7540147+00:00"},{"ID":18,"Title":"Book 18","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1800,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-04T05:00:45.7540147+00:00"},{"ID":19,"Title":"Book 19","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1900,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-03T05:00:45.7540147+00:00"},{"ID":20,"Title":"Book 20","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":2000,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-02T05:00:45.7540147+00:00"},{"ID":21,"Title":"Book 21","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":2100,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lo... (set the log level to DEBUG or TRACE to see the full content) 
  </msg>
-<msg timestamp="20201022 01:13:56.353" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20201022 01:13:55.895" endtime="20201022 01:13:56.353"></status>
+<msg timestamp="20201022 02:00:48.240" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20201022 02:00:46.376" endtime="20201022 02:00:48.240"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${RESPONSE}</arg>
 </arguments>
-<msg timestamp="20201022 01:13:56.354" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20201022 01:13:56.353" endtime="20201022 01:13:56.354"></status>
+<msg timestamp="20201022 02:00:48.241" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20201022 02:00:48.240" endtime="20201022 02:00:48.241"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:55.894" endtime="20201022 01:13:56.354"></status>
+<status status="PASS" starttime="20201022 02:00:46.376" endtime="20201022 02:00:48.241"></status>
 </kw>
 <kw name="Conferir o status code" library="ResourceAPI">
 <arguments>
@@ -57,12 +57,12 @@ given `alias`</doc>
 <arg>${RESPONSE.status_code}</arg>
 <arg>${STATUS_CODE}</arg>
 </arguments>
-<msg timestamp="20201022 01:13:56.356" level="INFO">Argument types are:
+<msg timestamp="20201022 02:00:48.243" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20201022 01:13:56.355" endtime="20201022 01:13:56.356"></status>
+<status status="PASS" starttime="20201022 02:00:48.242" endtime="20201022 02:00:48.243"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.355" endtime="20201022 01:13:56.356"></status>
+<status status="PASS" starttime="20201022 02:00:48.242" endtime="20201022 02:00:48.243"></status>
 </kw>
 <kw name="Conferir o reason" library="ResourceAPI">
 <arguments>
@@ -74,9 +74,9 @@ given `alias`</doc>
 <arg>${RESPONSE.reason}</arg>
 <arg>${REASON}</arg>
 </arguments>
-<status status="PASS" starttime="20201022 01:13:56.357" endtime="20201022 01:13:56.358"></status>
+<status status="PASS" starttime="20201022 02:00:48.244" endtime="20201022 02:00:48.245"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.357" endtime="20201022 01:13:56.358"></status>
+<status status="PASS" starttime="20201022 02:00:48.243" endtime="20201022 02:00:48.245"></status>
 </kw>
 <kw name="Conferir se é retornado uma lista com &quot;200&quot; livros" library="ResourceAPI">
 <kw name="Length Should Be" library="BuiltIn">
@@ -85,12 +85,12 @@ given `alias`</doc>
 <arg>${RESPONSE.json()}</arg>
 <arg>${QTD}</arg>
 </arguments>
-<msg timestamp="20201022 01:13:56.360" level="INFO">Length is 200</msg>
-<status status="PASS" starttime="20201022 01:13:56.359" endtime="20201022 01:13:56.360"></status>
+<msg timestamp="20201022 02:00:48.247" level="INFO">Length is 200</msg>
+<status status="PASS" starttime="20201022 02:00:48.246" endtime="20201022 02:00:48.248"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.358" endtime="20201022 01:13:56.361"></status>
+<status status="PASS" starttime="20201022 02:00:48.245" endtime="20201022 02:00:48.248"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:55.893" endtime="20201022 01:13:56.361" critical="yes"></status>
+<status status="PASS" starttime="20201022 02:00:46.375" endtime="20201022 02:00:48.248" critical="yes"></status>
 </test>
 <test id="s1-t2" name="Buscar livro específico">
 <kw name="Requisitar o livro &quot;15&quot;" library="ResourceAPI">
@@ -104,27 +104,27 @@ given `alias`</doc>
 <assign>
 <var>${RESPONSE}</var>
 </assign>
-<msg timestamp="20201022 01:13:56.596" level="INFO">GET Request : url=http://fakerestapi.azurewebsites.net/api//Books/15 
+<msg timestamp="20201022 02:00:48.473" level="INFO">GET Request : url=http://fakerestapi.azurewebsites.net/api//Books/15 
  path_url=/api//Books/15 
  headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'ARRAffinity=fe5631ef2a6b16b646e570e79f0f1363c734e7f13cc1e82c54e9a24574ffecf6'} 
  body=None 
  </msg>
-<msg timestamp="20201022 01:13:56.596" level="INFO">GET Response : url=http://fakerestapi.azurewebsites.net/api//Books/15 
+<msg timestamp="20201022 02:00:48.474" level="INFO">GET Response : url=http://fakerestapi.azurewebsites.net/api//Books/15 
  status=200, reason=OK 
- body={"ID":15,"Title":"Book 15","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1500,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-07T04:13:55.5283029+00:00"} 
+ body={"ID":15,"Title":"Book 15","Description":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PageCount":1500,"Excerpt":"Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n","PublishDate":"2020-10-07T05:00:47.3946651+00:00"} 
  </msg>
-<msg timestamp="20201022 01:13:56.596" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20201022 01:13:56.364" endtime="20201022 01:13:56.596"></status>
+<msg timestamp="20201022 02:00:48.474" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20201022 02:00:48.251" endtime="20201022 02:00:48.474"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${RESPONSE}</arg>
 </arguments>
-<msg timestamp="20201022 01:13:56.597" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20201022 01:13:56.597" endtime="20201022 01:13:56.597"></status>
+<msg timestamp="20201022 02:00:48.474" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20201022 02:00:48.474" endtime="20201022 02:00:48.475"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.363" endtime="20201022 01:13:56.597"></status>
+<status status="PASS" starttime="20201022 02:00:48.251" endtime="20201022 02:00:48.475"></status>
 </kw>
 <kw name="Conferir o status code" library="ResourceAPI">
 <arguments>
@@ -136,12 +136,12 @@ given `alias`</doc>
 <arg>${RESPONSE.status_code}</arg>
 <arg>${STATUS_CODE}</arg>
 </arguments>
-<msg timestamp="20201022 01:13:56.599" level="INFO">Argument types are:
+<msg timestamp="20201022 02:00:48.476" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20201022 01:13:56.599" endtime="20201022 01:13:56.599"></status>
+<status status="PASS" starttime="20201022 02:00:48.476" endtime="20201022 02:00:48.476"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.598" endtime="20201022 01:13:56.599"></status>
+<status status="PASS" starttime="20201022 02:00:48.475" endtime="20201022 02:00:48.477"></status>
 </kw>
 <kw name="Conferir o reason" library="ResourceAPI">
 <arguments>
@@ -153,9 +153,9 @@ given `alias`</doc>
 <arg>${RESPONSE.reason}</arg>
 <arg>${REASON}</arg>
 </arguments>
-<status status="PASS" starttime="20201022 01:13:56.600" endtime="20201022 01:13:56.601"></status>
+<status status="PASS" starttime="20201022 02:00:48.478" endtime="20201022 02:00:48.478"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.600" endtime="20201022 01:13:56.601"></status>
+<status status="PASS" starttime="20201022 02:00:48.477" endtime="20201022 02:00:48.478"></status>
 </kw>
 <kw name="Conferir se os dados retornados estão corretos" library="ResourceAPI">
 <kw name="${KEY} IN [ @{BOOK_VAR} ]" type="for">
@@ -165,10 +165,10 @@ given `alias`</doc>
 <arguments>
 <arg>${RESPONSE.json()['${KEY}']}</arg>
 </arguments>
-<msg timestamp="20201022 01:13:56.603" level="INFO">Length is 58</msg>
-<status status="PASS" starttime="20201022 01:13:56.602" endtime="20201022 01:13:56.603"></status>
+<msg timestamp="20201022 02:00:48.480" level="INFO">Length is 58</msg>
+<status status="PASS" starttime="20201022 02:00:48.479" endtime="20201022 02:00:48.480"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.602" endtime="20201022 01:13:56.603"></status>
+<status status="PASS" starttime="20201022 02:00:48.479" endtime="20201022 02:00:48.480"></status>
 </kw>
 <kw name="${KEY} = Excerpt" type="foritem">
 <kw name="Should Not Be Empty" library="BuiltIn">
@@ -176,10 +176,10 @@ given `alias`</doc>
 <arguments>
 <arg>${RESPONSE.json()['${KEY}']}</arg>
 </arguments>
-<msg timestamp="20201022 01:13:56.604" level="INFO">Length is 290</msg>
-<status status="PASS" starttime="20201022 01:13:56.603" endtime="20201022 01:13:56.604"></status>
+<msg timestamp="20201022 02:00:48.480" level="INFO">Length is 290</msg>
+<status status="PASS" starttime="20201022 02:00:48.480" endtime="20201022 02:00:48.480"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.603" endtime="20201022 01:13:56.604"></status>
+<status status="PASS" starttime="20201022 02:00:48.480" endtime="20201022 02:00:48.480"></status>
 </kw>
 <kw name="${KEY} = PublishDate" type="foritem">
 <kw name="Should Not Be Empty" library="BuiltIn">
@@ -187,12 +187,12 @@ given `alias`</doc>
 <arguments>
 <arg>${RESPONSE.json()['${KEY}']}</arg>
 </arguments>
-<msg timestamp="20201022 01:13:56.604" level="INFO">Length is 33</msg>
-<status status="PASS" starttime="20201022 01:13:56.604" endtime="20201022 01:13:56.605"></status>
+<msg timestamp="20201022 02:00:48.481" level="INFO">Length is 33</msg>
+<status status="PASS" starttime="20201022 02:00:48.481" endtime="20201022 02:00:48.481"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.604" endtime="20201022 01:13:56.605"></status>
+<status status="PASS" starttime="20201022 02:00:48.481" endtime="20201022 02:00:48.481"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.602" endtime="20201022 01:13:56.605"></status>
+<status status="PASS" starttime="20201022 02:00:48.479" endtime="20201022 02:00:48.481"></status>
 </kw>
 <kw name="${KEY} | ${VALUE} IN [ &amp;{BOOK_FIXED} ]" type="for">
 <kw name="${KEY} = ID, ${VALUE} = 15" type="foritem">
@@ -203,9 +203,9 @@ given `alias`</doc>
 <arg>${KEY}</arg>
 <arg>${VALUE}</arg>
 </arguments>
-<status status="PASS" starttime="20201022 01:13:56.605" endtime="20201022 01:13:56.606"></status>
+<status status="PASS" starttime="20201022 02:00:48.482" endtime="20201022 02:00:48.482"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.605" endtime="20201022 01:13:56.606"></status>
+<status status="PASS" starttime="20201022 02:00:48.482" endtime="20201022 02:00:48.482"></status>
 </kw>
 <kw name="${KEY} = Title, ${VALUE} = Book 15" type="foritem">
 <kw name="Dictionary Should Contain Item" library="Collections">
@@ -215,9 +215,9 @@ given `alias`</doc>
 <arg>${KEY}</arg>
 <arg>${VALUE}</arg>
 </arguments>
-<status status="PASS" starttime="20201022 01:13:56.606" endtime="20201022 01:13:56.607"></status>
+<status status="PASS" starttime="20201022 02:00:48.483" endtime="20201022 02:00:48.483"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.606" endtime="20201022 01:13:56.607"></status>
+<status status="PASS" starttime="20201022 02:00:48.483" endtime="20201022 02:00:48.483"></status>
 </kw>
 <kw name="${KEY} = PageCount, ${VALUE} = 1500" type="foritem">
 <kw name="Dictionary Should Contain Item" library="Collections">
@@ -227,27 +227,422 @@ given `alias`</doc>
 <arg>${KEY}</arg>
 <arg>${VALUE}</arg>
 </arguments>
-<status status="PASS" starttime="20201022 01:13:56.607" endtime="20201022 01:13:56.608"></status>
+<status status="PASS" starttime="20201022 02:00:48.484" endtime="20201022 02:00:48.484"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.607" endtime="20201022 01:13:56.608"></status>
+<status status="PASS" starttime="20201022 02:00:48.483" endtime="20201022 02:00:48.484"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.605" endtime="20201022 01:13:56.608"></status>
+<status status="PASS" starttime="20201022 02:00:48.481" endtime="20201022 02:00:48.484"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.601" endtime="20201022 01:13:56.608"></status>
+<status status="PASS" starttime="20201022 02:00:48.479" endtime="20201022 02:00:48.484"></status>
 </kw>
-<status status="PASS" starttime="20201022 01:13:56.363" endtime="20201022 01:13:56.608" critical="yes"></status>
+<status status="PASS" starttime="20201022 02:00:48.250" endtime="20201022 02:00:48.488" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20201022 01:13:55.639" endtime="20201022 01:13:56.610"></status>
+<test id="s1-t3" name="Cadastrar um novo livro">
+<kw name="Cadastrar um livro" library="ResourceAPI">
+<kw name="Dumps" library="json">
+<doc>Serialize ``obj`` to a JSON formatted ``str``.</doc>
+<arguments>
+<arg>${DATA}</arg>
+</arguments>
+<assign>
+<var>${REQ_DATA}</var>
+</assign>
+<msg timestamp="20201022 02:00:48.491" level="INFO">${REQ_DATA} = {"ID": "0", "Title": "Teste,", "Description": "Teste", "PageCount": "0", "Excerpt": "Teste", "PublishDate": "2020-10-22T03:00:25.937Z"}</msg>
+<status status="PASS" starttime="20201022 02:00:48.491" endtime="20201022 02:00:48.491"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>alias=fakeAPI</arg>
+<arg>uri=${ENDPOINT}</arg>
+<arg>headers=${HEADERS}</arg>
+<arg>data=${REQ_DATA}</arg>
+</arguments>
+<assign>
+<var>${RESPONSE}</var>
+</assign>
+<msg timestamp="20201022 02:00:48.712" level="INFO">POST Request : url=http://fakerestapi.azurewebsites.net/api//Books/ 
+ path_url=/api//Books/ 
+ headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'content-type': 'application/json', 'Cookie': 'ARRAffinity=fe5631ef2a6b16b646e570e79f0f1363c734e7f13cc1e82c54e9a24574ffecf6', 'Content-Length': '135'} 
+ body=b'{"ID": "0", "Title": "Teste,", "Description": "Teste", "PageCount": "0", "Excerpt": "Teste", "PublishDate": "2020-10-22T03:00:25.937Z"}' 
+ </msg>
+<msg timestamp="20201022 02:00:48.712" level="INFO">POST Response : url=http://fakerestapi.azurewebsites.net/api//Books/ 
+ status=200, reason=OK 
+ body={"ID":0,"Title":"Teste,","Description":"Teste","PageCount":0,"Excerpt":"Teste","PublishDate":"2020-10-22T03:00:25.937Z"} 
+ </msg>
+<msg timestamp="20201022 02:00:48.713" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20201022 02:00:48.491" endtime="20201022 02:00:48.713"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${RESPONSE}</arg>
+</arguments>
+<msg timestamp="20201022 02:00:48.713" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20201022 02:00:48.713" endtime="20201022 02:00:48.713"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.490" endtime="20201022 02:00:48.713"></status>
+</kw>
+<kw name="Conferir o status code" library="ResourceAPI">
+<arguments>
+<arg>200</arg>
+</arguments>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${RESPONSE.status_code}</arg>
+<arg>${STATUS_CODE}</arg>
+</arguments>
+<msg timestamp="20201022 02:00:48.715" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20201022 02:00:48.715" endtime="20201022 02:00:48.715"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.714" endtime="20201022 02:00:48.716"></status>
+</kw>
+<kw name="Conferir o reason" library="ResourceAPI">
+<arguments>
+<arg>OK</arg>
+</arguments>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${RESPONSE.reason}</arg>
+<arg>${REASON}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.717" endtime="20201022 02:00:48.717"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.716" endtime="20201022 02:00:48.717"></status>
+</kw>
+<kw name="Conferir a resposta da API" library="ResourceAPI">
+<kw name="${KEY} | ${VALUE} IN [ &amp;{DATA} ]" type="for">
+<kw name="${KEY} = ID, ${VALUE} = 0" type="foritem">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>${KEY}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.719" endtime="20201022 02:00:48.719"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.718" endtime="20201022 02:00:48.719"></status>
+</kw>
+<kw name="${KEY} = Title, ${VALUE} = Teste," type="foritem">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>${KEY}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.719" endtime="20201022 02:00:48.720"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.719" endtime="20201022 02:00:48.720"></status>
+</kw>
+<kw name="${KEY} = Description, ${VALUE} = Teste" type="foritem">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>${KEY}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.720" endtime="20201022 02:00:48.721"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.720" endtime="20201022 02:00:48.721"></status>
+</kw>
+<kw name="${KEY} = PageCount, ${VALUE} = 0" type="foritem">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>${KEY}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.721" endtime="20201022 02:00:48.722"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.721" endtime="20201022 02:00:48.722"></status>
+</kw>
+<kw name="${KEY} = Excerpt, ${VALUE} = Teste" type="foritem">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>${KEY}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.722" endtime="20201022 02:00:48.722"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.722" endtime="20201022 02:00:48.722"></status>
+</kw>
+<kw name="${KEY} = PublishDate, ${VALUE} = 2020-10-22T03:00:25.937Z" type="foritem">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>${KEY}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.723" endtime="20201022 02:00:48.723"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.722" endtime="20201022 02:00:48.723"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.718" endtime="20201022 02:00:48.723"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.718" endtime="20201022 02:00:48.723"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.490" endtime="20201022 02:00:48.724" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Alterar um livro">
+<kw name="Alterar o livro &quot;150&quot;" library="ResourceAPI">
+<kw name="Dumps" library="json">
+<doc>Serialize ``obj`` to a JSON formatted ``str``.</doc>
+<arguments>
+<arg>${DATA}</arg>
+</arguments>
+<assign>
+<var>${REQ_DATA}</var>
+</assign>
+<msg timestamp="20201022 02:00:48.726" level="INFO">${REQ_DATA} = {"ID": "0", "Title": "Teste,", "Description": "Teste", "PageCount": "0", "Excerpt": "Teste", "PublishDate": "2020-10-22T03:00:25.937Z"}</msg>
+<status status="PASS" starttime="20201022 02:00:48.726" endtime="20201022 02:00:48.726"></status>
+</kw>
+<kw name="Put Request" library="RequestsLibrary">
+<doc>Send a PUT request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>alias=fakeAPI</arg>
+<arg>uri=${ENDPOINT}${ID}</arg>
+<arg>headers=${HEADERS}</arg>
+<arg>data=${REQ_DATA}</arg>
+</arguments>
+<assign>
+<var>${RESPONSE}</var>
+</assign>
+<msg timestamp="20201022 02:00:48.945" level="INFO">PUT Request : url=http://fakerestapi.azurewebsites.net/api//Books/150 
+ path_url=/api//Books/150 
+ headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'content-type': 'application/json', 'Cookie': 'ARRAffinity=fe5631ef2a6b16b646e570e79f0f1363c734e7f13cc1e82c54e9a24574ffecf6', 'Content-Length': '135'} 
+ body=b'{"ID": "0", "Title": "Teste,", "Description": "Teste", "PageCount": "0", "Excerpt": "Teste", "PublishDate": "2020-10-22T03:00:25.937Z"}' 
+ </msg>
+<msg timestamp="20201022 02:00:48.945" level="INFO">PUT Response : url=http://fakerestapi.azurewebsites.net/api//Books/150 
+ status=200, reason=OK 
+ body={"ID":0,"Title":"Teste,","Description":"Teste","PageCount":0,"Excerpt":"Teste","PublishDate":"2020-10-22T03:00:25.937Z"} 
+ </msg>
+<msg timestamp="20201022 02:00:48.946" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20201022 02:00:48.726" endtime="20201022 02:00:48.946"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${RESPONSE}</arg>
+</arguments>
+<msg timestamp="20201022 02:00:48.946" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20201022 02:00:48.946" endtime="20201022 02:00:48.946"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.726" endtime="20201022 02:00:48.947"></status>
+</kw>
+<kw name="Conferir o status code" library="ResourceAPI">
+<arguments>
+<arg>200</arg>
+</arguments>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${RESPONSE.status_code}</arg>
+<arg>${STATUS_CODE}</arg>
+</arguments>
+<msg timestamp="20201022 02:00:48.948" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20201022 02:00:48.948" endtime="20201022 02:00:48.948"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.947" endtime="20201022 02:00:48.949"></status>
+</kw>
+<kw name="Conferir o reason" library="ResourceAPI">
+<arguments>
+<arg>OK</arg>
+</arguments>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${RESPONSE.reason}</arg>
+<arg>${REASON}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.950" endtime="20201022 02:00:48.950"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.949" endtime="20201022 02:00:48.950"></status>
+</kw>
+<kw name="Conferir a resposta da API" library="ResourceAPI">
+<kw name="${KEY} | ${VALUE} IN [ &amp;{DATA} ]" type="for">
+<kw name="${KEY} = ID, ${VALUE} = 0" type="foritem">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>${KEY}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.952" endtime="20201022 02:00:48.952"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.951" endtime="20201022 02:00:48.952"></status>
+</kw>
+<kw name="${KEY} = Title, ${VALUE} = Teste," type="foritem">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>${KEY}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.952" endtime="20201022 02:00:48.953"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.952" endtime="20201022 02:00:48.953"></status>
+</kw>
+<kw name="${KEY} = Description, ${VALUE} = Teste" type="foritem">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>${KEY}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.954" endtime="20201022 02:00:48.954"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.953" endtime="20201022 02:00:48.954"></status>
+</kw>
+<kw name="${KEY} = PageCount, ${VALUE} = 0" type="foritem">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>${KEY}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.955" endtime="20201022 02:00:48.955"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.955" endtime="20201022 02:00:48.955"></status>
+</kw>
+<kw name="${KEY} = Excerpt, ${VALUE} = Teste" type="foritem">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>${KEY}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.955" endtime="20201022 02:00:48.956"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.955" endtime="20201022 02:00:48.956"></status>
+</kw>
+<kw name="${KEY} = PublishDate, ${VALUE} = 2020-10-22T03:00:25.937Z" type="foritem">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>${KEY}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:48.956" endtime="20201022 02:00:48.957"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.956" endtime="20201022 02:00:48.957"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.951" endtime="20201022 02:00:48.957"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.951" endtime="20201022 02:00:48.957"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.725" endtime="20201022 02:00:48.957" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Deletar um livro">
+<kw name="Deletar o livro &quot;200&quot;" library="ResourceAPI">
+<kw name="Delete Request" library="RequestsLibrary">
+<doc>Send a DELETE request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>fakeAPI</arg>
+<arg>${ENDPOINT}${ID}</arg>
+</arguments>
+<assign>
+<var>${RESPONSE}</var>
+</assign>
+<msg timestamp="20201022 02:00:49.179" level="INFO">DELETE Request : url=http://fakerestapi.azurewebsites.net/api//Books/200 
+ path_url=/api//Books/200 
+ headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'ARRAffinity=fe5631ef2a6b16b646e570e79f0f1363c734e7f13cc1e82c54e9a24574ffecf6', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20201022 02:00:49.180" level="INFO">DELETE Response : url=http://fakerestapi.azurewebsites.net/api//Books/200 
+ status=200, reason=OK 
+ body=None 
+ </msg>
+<msg timestamp="20201022 02:00:49.180" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20201022 02:00:48.959" endtime="20201022 02:00:49.180"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${RESPONSE}</arg>
+</arguments>
+<msg timestamp="20201022 02:00:49.180" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20201022 02:00:49.180" endtime="20201022 02:00:49.180"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.959" endtime="20201022 02:00:49.181"></status>
+</kw>
+<kw name="Conferir o status code" library="ResourceAPI">
+<arguments>
+<arg>200</arg>
+</arguments>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${RESPONSE.status_code}</arg>
+<arg>${STATUS_CODE}</arg>
+</arguments>
+<msg timestamp="20201022 02:00:49.182" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20201022 02:00:49.182" endtime="20201022 02:00:49.182"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:49.181" endtime="20201022 02:00:49.182"></status>
+</kw>
+<kw name="Conferir o reason" library="ResourceAPI">
+<arguments>
+<arg>OK</arg>
+</arguments>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${RESPONSE.reason}</arg>
+<arg>${REASON}</arg>
+</arguments>
+<status status="PASS" starttime="20201022 02:00:49.183" endtime="20201022 02:00:49.184"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:49.183" endtime="20201022 02:00:49.184"></status>
+</kw>
+<kw name="Conferir se o livro foi deletado" library="ResourceAPI">
+<kw name="Length Should Be" library="BuiltIn">
+<doc>Verifies that the length of the given item is correct.</doc>
+<arguments>
+<arg>${RESPONSE.text}</arg>
+<arg>${0}</arg>
+</arguments>
+<msg timestamp="20201022 02:00:49.185" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20201022 02:00:49.185" endtime="20201022 02:00:49.186"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:49.185" endtime="20201022 02:00:49.186"></status>
+</kw>
+<status status="PASS" starttime="20201022 02:00:48.958" endtime="20201022 02:00:49.186" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201022 02:00:46.063" endtime="20201022 02:00:49.189"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0">Critical Tests</stat>
-<stat pass="2" fail="0">All Tests</stat>
+<stat pass="5" fail="0">Critical Tests</stat>
+<stat pass="5" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" id="s1" name="Testapi">Testapi</stat>
+<stat pass="5" fail="0" id="s1" name="Testapi">Testapi</stat>
 </suite>
 </statistics>
 <errors>

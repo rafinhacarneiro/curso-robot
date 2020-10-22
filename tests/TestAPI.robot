@@ -17,4 +17,22 @@ Buscar livro específico
     Conferir o reason             OK
     Conferir se os dados retornados estão corretos
 
+Cadastrar um novo livro
+    Cadastrar um livro
+    Conferir o status code        200
+    Conferir o reason             OK
+    Conferir a resposta da API
+
+Alterar um livro
+    Alterar o livro "150"
+    Conferir o status code        200
+    Conferir o reason             OK
+    Conferir a resposta da API
+
+Deletar um livro
+    Deletar o livro "200"
+    Conferir o status code        200
+    Conferir o reason             OK
+    Conferir se o livro foi deletado
+
 # *** Keywords ***
